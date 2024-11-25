@@ -101,4 +101,3 @@
 #        define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #    endif // !__arm__
 #endif
-#define UNICODE_SELECTED_MODES UNICODE_MODE_WINDOWS
