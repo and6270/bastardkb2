@@ -18,7 +18,7 @@ RGB_MATRIX_ENABLE = no     # Enable keyboard RGB matrix functionality
 
 SPLIT_KEYBOARD = yes
 
-POINTING_DEVICE_ENABLE = no # Enable trackball
+POINTING_DEVICE_ENABLE = yes # Enable trackball
 POINTING_DEVICE_DRIVER = pmw3360
 MOUSE_SHARED_EP = no # Unify multiple HID interfaces into a single Endpoint
 
