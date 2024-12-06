@@ -292,7 +292,7 @@ KC_TAB,LT(SYM,KC_A),ALT_T(KC_S),SFT_T(KC_D),CTL_T(KC_F),KC_G,  KC_H, CTL_T(KC_J)
   ),
   [FUN] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_F12, KC_F4,   KC_F5,  KC_F6, XXXXXXX,  XXXXXXX,
+       XXXXXXX, XXXXXXX, KC_INS,  KC_CAPS, KC_NUM,  KC_SCRL,    KC_F12, KC_F4,   KC_F5,  KC_F6, XXXXXXX,  XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX,    KC_F11, XXXXXXX, KC_F1,  KC_F2, KC_F3,    XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -314,13 +314,13 @@ KC_TAB,LT(SYM,KC_A),ALT_T(KC_S),SFT_T(KC_D),CTL_T(KC_F),KC_G,  KC_H, CTL_T(KC_J)
   ),
   [PNT] = LAYOUT(
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       _______, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+       _______, _______, CARRETM, SNIPING, DRGSCRL, S_D_MOD,    S_D_RMOD, DRGSCRL, SNIPING, CARRETM, _______, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX,    XXXXXXX, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, XXXXXXX,
+       XXXXXXX, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, DPI_MOD,    DPI_RMOD, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, EE_CLR,  QK_BOOT,    QK_BOOT, EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  KC_BTN1, KC_BTN3, KC_BTN2,    KC_BTN2, KC_BTN1
+                                  KC_BTN3, KC_BTN1, KC_BTN2,    KC_BTN2, KC_BTN1
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
