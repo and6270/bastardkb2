@@ -20,6 +20,7 @@
 
 /* Trackball angle adjustment. */
 #define ROTATIONAL_TRANSFORM_ANGLE -25
+#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 
 /* RGB settings. */
 #ifdef RGB_MATRIX_ENABLE

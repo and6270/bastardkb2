@@ -269,11 +269,11 @@ KC_TAB,LT(SYM,KC_A),ALT_T(KC_S),SFT_T(KC_D),CTL_T(KC_F),KC_G,  KC_H, CTL_T(KC_J)
 
   [SYM] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       XXXXXXX, QMK1,    QMK19,   QMK20,   QMK11,  KC_PERC,     QMK22, QMK9, QMK18,   QMK21,   QMK15,   XXXXXXX,
+       XXXXXXX, QMK1,    QMK19,   QMK20,   QMK11,  KC_PERC,     QMK9, QMK22, QMK18,   QMK21,   QMK15,   XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, _______, KC_PPLS, KC_PMNS, KC_EQL, QMK2,        QMK8,  QMK5, KC_LPRN, KC_RPRN, _______, XXXXXXX,
+       XXXXXXX, _______, KC_PPLS, KC_PMNS, KC_EQL, QMK2,        QMK5, QMK8,  KC_LPRN, KC_RPRN, _______, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_EXLM, KC_PSLS, KC_PAST, QMK4,   KC_UNDS,     QMK14, QMK3, QMK16,   QMK17,   QMK10,   XXXXXXX,
+       XXXXXXX, KC_EXLM, KC_PSLS, KC_PAST, QMK4,   KC_UNDS,     QMK3, QMK14, QMK16,   QMK17,   QMK10,   XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   QMK6, XXXXXXX, _______,    XXXXXXX, QMK7
   //                            ╰───────────────────────────╯ ╰──────────────────╯
@@ -303,7 +303,7 @@ KC_TAB,LT(SYM,KC_A),ALT_T(KC_S),SFT_T(KC_D),CTL_T(KC_F),KC_G,  KC_H, CTL_T(KC_J)
   ),
   [NAV] = LAYOUT(
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       _______, KC_F1,   KC_F3,   KC_F5,   KC_F9,   XXXXXXX,   XXXXXXX,   KC_HOME, KC_PGUP, KC_PGDN, KC_END,  XXXXXXX,
+       _______, KC_F1,   KC_F3,   KC_F5,   KC_F9,   KC_INS,    XXXXXXX,   KC_HOME, KC_PGUP, KC_PGDN, KC_END,  XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, KC_F2,   KC_LALT, KC_LSFT, KC_LCTL, KC_DEL,    C(KC_MINS), KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, C(S(KC_MINS)),
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -324,4 +324,9 @@ KC_TAB,LT(SYM,KC_A),ALT_T(KC_S),SFT_T(KC_D),CTL_T(KC_F),KC_G,  KC_H, CTL_T(KC_J)
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
+
+void pointing_device_init_user(void) {
+    set_auto_mouse_layer(PNT); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
+    set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
+}
 // clang-format on
