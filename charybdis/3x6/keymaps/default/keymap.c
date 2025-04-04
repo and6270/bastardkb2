@@ -23,6 +23,7 @@ enum charybdis_keymap_layers {
     FUN,
     NAV,
     PNT,
+    A_PNT,
 };
 
 enum custom_keycodes {
@@ -52,7 +53,7 @@ enum custom_keycodes {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case QMK1:
+    case QMK1: // @
         if (record->event.pressed) {
             // when keycode QMKBEST is pressed
             register_code(KC_LALT);
@@ -64,7 +65,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-    case QMK2:
+    case QMK2: // #
         if (record->event.pressed) {
             // when keycode QMKURL is pressed
             register_code(KC_LALT);
@@ -76,7 +77,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-    case QMK3:
+    case QMK3: // $
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P3, 10);
@@ -85,7 +86,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-    case QMK4:
+    case QMK4: // ^
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P9, 10);
@@ -93,7 +94,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK5:
+    case QMK5: // &
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P3, 10);
@@ -102,7 +103,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
         
-    case QMK6:
+    case QMK6: // ;
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P5, 10);
@@ -110,7 +111,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK7:
+    case QMK7: // :
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P5, 10);
@@ -118,7 +119,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK8:
+    case QMK8: // "
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P3, 10);
@@ -126,7 +127,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK9:
+    case QMK9: // |
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P1, 10);
@@ -135,7 +136,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK10:
+    case QMK10: // ]
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P1, 10);
@@ -144,7 +145,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK11:
+    case QMK11: // обратный слэш 
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P9, 10);
@@ -152,7 +153,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK12:
+    case QMK12: // ,
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P4, 10);
@@ -160,7 +161,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK13:
+    case QMK13: //.
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P4, 10);
@@ -168,7 +169,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK14:
+    case QMK14: // '
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P3, 10);
@@ -176,7 +177,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK15:
+    case QMK15: // ?
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P6, 10);
@@ -184,7 +185,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK16:
+    case QMK16: // [
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P9, 10);
@@ -192,7 +193,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK17:
+    case QMK17: // ]
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P9, 10);
@@ -200,7 +201,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK18:
+    case QMK18: // {
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P1, 10);
@@ -209,7 +210,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK19:
+    case QMK19: // <
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P6, 10);
@@ -217,7 +218,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK20:
+    case QMK20: // >
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P6, 10);
@@ -225,7 +226,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK21:
+    case QMK21: // }
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P1, 10);
@@ -234,7 +235,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             unregister_code(KC_LALT);
         }
         break;
-    case QMK22:
+    case QMK22: // `
         if (record->event.pressed) {
             register_code(KC_LALT);
             tap_code_delay(KC_P9, 10);
@@ -320,13 +321,32 @@ KC_TAB,LT(SYM,KC_A),ALT_T(KC_S),SFT_T(KC_D),CTL_T(KC_F),KC_G,  KC_H, CTL_T(KC_J)
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, EE_CLR,  QK_BOOT,    QK_BOOT, EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  KC_BTN3, KC_BTN1, KC_BTN2,    KC_BTN2, KC_BTN1
+                                  KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN1, KC_BTN2
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
+  [A_PNT] = LAYOUT(
+    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
+        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
+   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
+   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+        _______, _______, _______, _______, _______,  _______,   _______, _______, _______, _______, _______, _______,
+   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
+                                   KC_BTN2, KC_BTN1, _______,    _______, KC_BTN3
+   //                            ╰───────────────────────────╯ ╰──────────────────╯
+   ),
 };
 
+// Авто-мышь
 void pointing_device_init_user(void) {
-    set_auto_mouse_layer(PNT); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
+    set_auto_mouse_layer(A_PNT); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
+}
+
+// Переключение режимов работы трекбола на слоях
+layer_state_t layer_state_set_user(layer_state_t state) {
+    charybdis_set_pointer_carret_enabled(layer_state_cmp(state, NAV));
+    charybdis_set_pointer_dragscroll_enabled(layer_state_cmp(state, SYM));
+    return state;
 }
 // clang-format on
